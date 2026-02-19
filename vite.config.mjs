@@ -5,4 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/minimax-game-ai/',
+  server: {
+    // Allow Kavia preview host (fixes "Blocked request. This host is not allowed.")
+    allowedHosts: ['vscode-internal-15110-beta.beta01.cloud.kavia.ai'],
+  },
 })
